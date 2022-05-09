@@ -2,7 +2,6 @@ import MyButton from './Button.vue';
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
   component: MyButton,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -45,8 +44,9 @@ Large.args = {
   label: 'Button',
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
+export const Small = {
+  args: {
+    size: 'small',
+    label: 'Button',
+  },
 };

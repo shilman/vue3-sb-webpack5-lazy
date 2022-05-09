@@ -1,5 +1,8 @@
 module.exports = {
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: [
+    '../src/**/*.stories.mdx',
+    { directory: '../src/stories', files: '**/*.stories.@(js|jsx|ts|tsx)', titlePrefix: 'Example' },
+  ],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
@@ -17,5 +20,6 @@ module.exports = {
   },
   features: {
     storyStoreV7: true,
+    previewMdx2: true,
   },
 };
